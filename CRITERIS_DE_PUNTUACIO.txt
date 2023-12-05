@@ -1,0 +1,14 @@
+Informe final 3, punts
+- Les captures de pantalla són suficients.
+- Les explicacions són entenedores.
+
+Tasca 2, 3 punts
+- S'ha creat la branca correctament.
+- El joc i el carregador funcionen en local.
+- Els canvis es pujen correctament al repositori en remot.
+
+Tasca 3, 4 punts
+- S'identifiquen correctament els canvis dels arxius.
+- S'incorporen els canvis del professor correctament a la branca local correcta (i al repositori local).
+- Es realitzen els canvis pertinents sense l'ajuda del professor.
+- Es pujen els canvis correctament al repositori en remot.
