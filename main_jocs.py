@@ -19,6 +19,7 @@ from collections import defaultdict
 from termcolor import colored
 import f00_functions as f00
 import f01_data_base as fdb
+import g02_wordle as g02
 # Versió 1.0 cal importar el teu fitxer de jocs
 
 # Aquesta funció, demana a l'usuari un sencer per triar jocs
@@ -64,6 +65,8 @@ def playGame(whatGame):
     # elif whatGame == X:
     #    return(s) de la funció = com he anomenat el paquet del joc  .   funció per executar el joc seleccionat ()
     #    errorsInExecution      =                                 g0X.startX 
+    elif whatGame == 2:
+        errorsInExecution = g02.startWordle()
     else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
@@ -79,7 +82,8 @@ def main():
 
     # creo un diccionari amb els jocs instal·lats
     dictGames={
-        0: "Vull deixar de jugar"
+        0: "Vull deixar de jugar",
+        2: "Wordle"
     }
     # A la versió 1.0 has d'afegir aquó el nom del teu joc.
     # Creo una llista de missatges per mostrar a la funció
