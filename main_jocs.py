@@ -19,6 +19,7 @@ from collections import defaultdict
 from termcolor import colored
 import f00_functions as f00
 import f01_data_base as fdb
+import g01_penjat as g01
 # Versió 1.0 cal importar el teu fitxer de jocs
 
 # Aquesta funció, demana a l'usuari un sencer per triar jocs
@@ -61,6 +62,8 @@ def playGame(whatGame):
         errorsInExecution = 1
     # A la versió 1.0 hauréu de modificar aquest codi afegint alguna cosa
     # similar al que poso a baix
+    elif whatGame == 1:
+	g01.startAhorcado()
     # elif whatGame == X:
     #    return(s) de la funció = com he anomenat el paquet del joc  .   funció per executar el joc seleccionat ()
     #    errorsInExecution      =                                 g0X.startX 
