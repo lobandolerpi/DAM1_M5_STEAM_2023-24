@@ -20,6 +20,7 @@ from termcolor import colored
 import f00_functions as f00
 import f01_data_base as fdb
 import g02_wordle as g02
+import tresenraya.py  as g07
 # Versió 1.0 cal importar el teu fitxer de jocs
 
 # Aquesta funció, demana a l'usuari un sencer per triar jocs
@@ -67,6 +68,9 @@ def playGame(whatGame):
     #    errorsInExecution      =                                 g0X.startX 
     elif whatGame == 2:
         errorsInExecution = g02.startWordle()
+    elif whatGame == 7:
+	errorsInExecution = g07.starTresenraya()
+
     else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
@@ -84,6 +88,7 @@ def main():
     dictGames={
         0: "Vull deixar de jugar",
         2: "Wordle"
+	3: "Tres en raya"
     }
     # A la versió 1.0 has d'afegir aquó el nom del teu joc.
     # Creo una llista de missatges per mostrar a la funció
