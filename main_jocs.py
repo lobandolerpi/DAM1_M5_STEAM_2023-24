@@ -20,7 +20,7 @@ from termcolor import colored
 import f00_functions as f00
 import f01_data_base as fdb
 import g02_wordle as g02
-import tresenraya.py  as g07
+import tresenraya as g07
 # Versió 1.0 cal importar el teu fitxer de jocs
 
 # Aquesta funció, demana a l'usuari un sencer per triar jocs
