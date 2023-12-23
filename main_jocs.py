@@ -19,6 +19,7 @@ from collections import defaultdict
 from termcolor import colored
 import f00_functions as f00
 import f01_data_base as fdb
+import g08_blackjack as g08
 # Versió 1.0 cal importar el teu fitxer de jocs
 import g09_anagrama as g09
 
@@ -60,6 +61,8 @@ def playGame(whatGame):
     if whatGame == 0:
         # en veritat això no es un error, sino el codi d'error per sortir
         errorsInExecution = 1
+    elif whatGame == 8:
+        g08.startBlackjack()
     # A la versió 1.0 hauréu de modificar aquest codi afegint alguna cosa
     # similar al que poso a baix
     elif whatGame == 9:
@@ -82,6 +85,7 @@ def main():
     # creo un diccionari amb els jocs instal·lats
     dictGames={
         0: "Vull deixar de jugar",
+        8: "BlackJack",
         9: "Anagrama"
     }
     # A la versió 1.0 has d'afegir aquó el nom del teu joc.
