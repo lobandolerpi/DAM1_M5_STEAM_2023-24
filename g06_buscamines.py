@@ -15,7 +15,7 @@ import f00_functions as f00
 
 NUM_MINES = 3
 global dictRows
-dictRows={0:"A", 1:"B", 2:"C", 3:"D", 4:"E", 5:"G"}
+dictRows = {0: "A", 1: "B", 2: "C", 3: "D", 4: "E", 5: "G"}
 MINA = "*"
 ESPACIO_SIN_ABRIR = "."
 ESPACIO_ABIERTO = "-"
@@ -91,15 +91,17 @@ def iniciar_tablero_con_string(posiciones_string):
         posiciones_separadas.append(tercera_posicion)
     colocar_minas_en_tablero(posiciones_separadas)
 
+
 def startBoardListLists(listMines):
     # Faig un loop per les mines per canviar el format
     # al que tenia el programa original
     for i in range(NUM_MINES):
         # Canvio l'input al format que hem demanen
-        txtRow=dictRows[listMines[i][0]]
-        txtCol=str(listMines[i][1])
-        listMines[i]=txtRow + txtCol
+        txtRow = dictRows[listMines[i][0]]
+        txtCol = str(listMines[i][1])
+        listMines[i] = txtRow + txtCol
     colocar_minas_en_tablero(listMines)
+
 
 def obtener_minas_cercanas(fila, columna):
     conteo = 0
@@ -156,7 +158,8 @@ def imprimir_tablero():
                 else:
                     verdadero_dato = ESPACIO_SIN_ABRIR
             elif dato == ESPACIO_ABIERTO:
-                verdadero_dato = obtener_minas_cercanas(numero_fila, numero_columna)
+                verdadero_dato = obtener_minas_cercanas(
+                    numero_fila, numero_columna)
             elif dato == ESPACIO_SIN_ABRIR:
                 verdadero_dato = "."
 
@@ -197,26 +200,30 @@ def no_hay_casillas_sin_abrir():
 
 def solicitar_coordenadas():
     while True:
-        coordenadas = input("Ingresa el string con las posiciones de las minas: ")
+        coordenadas = input(
+            "Ingresa el string con las posiciones de las minas: ")
         if len(coordenadas) == COLUMNAS:
             return coordenadas
         else:
             print("Coordenadas no válidas. Intenta de nuevo")
 
 # La posició de les mines és automàtica
-def create_random_board(num_mines,num_rows,num_col):
+
+
+def create_random_board(num_mines, num_rows, num_col):
     # Declaro la llista on desare la posició de les mines
-    listMines=[[-1,-1]]*num_mines
+    listMines = [[-1, -1]]*num_mines
     # Loop per totes les mines
     for i in range(num_mines):
         # posició de la mina dolenta per intrar al while
-        xy=[-1,-1]
+        xy = [-1, -1]
         while xy in listMines:
-            # Genero aleatòriament 
-            xy=[random.randint(0,num_rows-1),random.randint(0,num_col-1)]
+            # Genero aleatòriament
+            xy = [random.randint(0, num_rows-1), random.randint(0, num_col-1)]
             # Si esta repetida el while fara que s'en generi una altra
-        listMines[i]=xy  
-    return listMines  
+        listMines[i] = xy
+    return listMines
+
 
 def solicitar_casilla():
     while True:
@@ -244,7 +251,7 @@ def startBuscamines():
     # Joc del Buscamines
     # Defineixo un nom provisional pel jugador,
     # Després quan vingui la versió 2.0 s'haureu de canviar com es defineix player
-    player = "Jugador" 
+    player = "Jugador"
     print('\n Benvingut ' + player + '!!! \n Juguem al Buscamines')
     print('Al tauler s\'amagen ' + str(NUM_MINES) + ' mines')
     print('El jugador ha d\'anar seleccionant caselles a alliberar')
@@ -256,9 +263,9 @@ def startBuscamines():
     # Variable a tornar per que el main general sàpiga que fer
     errorsInExecution = 0
     inicializar_tablero()
-    #coordenadas = solicitar_coordenadas()
-    listMines = create_random_board(NUM_MINES,FILAS,COLUMNAS)
-    #iniciar_tablero_con_string(coordenadas )
+    # coordenadas = solicitar_coordenadas()
+    listMines = create_random_board(NUM_MINES, FILAS, COLUMNAS)
+    # iniciar_tablero_con_string(coordenadas )
     startBoardListLists(listMines)
     imprimir_tablero()
     while not HA_PERDIDO and not HA_GANADO:
@@ -278,4 +285,4 @@ def startBuscamines():
 
 # Aquesta línia és només per comprobar que el programa et funciona sense el main
 # Ja per la versió 1.0 hauries de comentar-la i passar-la al codi principal d'alguna manera
-startBuscamines()
+# startBuscamines()
