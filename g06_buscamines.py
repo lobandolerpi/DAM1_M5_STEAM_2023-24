@@ -248,6 +248,9 @@ def solicitar_casilla():
 
 
 def startBuscamines():
+    global HA_GANADO, HA_PERDIDO
+    HA_GANADO = False
+    HA_PERDIDO = False
     # Joc del Buscamines
     # Defineixo un nom provisional pel jugador,
     # Després quan vingui la versió 2.0 s'haureu de canviar com es defineix player
