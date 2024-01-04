@@ -15,7 +15,7 @@ import f00_functions as f00
 
 NUM_MINES = 3
 global dictRows
-dictRows = {0: "A", 1: "B", 2: "C", 3: "D", 4: "E", 5: "G"}
+dictRows = {0: "A", 1: "B", 2: "C", 3: "D", 4: "E", 5: "F"}
 MINA = "*"
 ESPACIO_SIN_ABRIR = "."
 ESPACIO_ABIERTO = "-"
