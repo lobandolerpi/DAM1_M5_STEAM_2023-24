@@ -19,7 +19,7 @@ from collections import defaultdict
 from termcolor import colored
 import f00_functions as f00
 import f01_data_base as fdb
-# Versió 1.0 cal importar el teu fitxer de jocs
+import g01_penjat as g01
 import g09_anagrama as g09
 import g06_buscamines as g06
 
@@ -67,12 +67,13 @@ def playGame(whatGame):
         errorsInExecution = 1
     # A la versió 1.0 hauréu de modificar aquest codi afegint alguna cosa
     # similar al que poso a baix
+    elif whatGame == 1:
+        errorsInExecution = g01.startAhorcado()
     elif whatGame == 6:
         errorsInExecution = g06.startBuscamines()
     elif whatGame == 9:
        # return(s) de la funció = com he anomenat el paquet del joc  .   funció per executar el joc seleccionat ()
         errorsInExecution = g09.startAnagrames()
-
     else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
@@ -89,6 +90,7 @@ def main():
     # creo un diccionari amb els jocs instal·lats
     dictGames = {
         0: "Vull deixar de jugar",
+        1: "Penjat",
         6: "Buscamines",
         9: "Anagrama"
     }
