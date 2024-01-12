@@ -19,10 +19,16 @@ from collections import defaultdict
 from termcolor import colored
 import f00_functions as f00
 import f01_data_base as fdb
-import g02_wordle as g02
 # Versió 1.0 cal importar el teu fitxer de jocs
+import g01_penjat as g01
+import g02_wordle as g02
+import g09_anagrama as g09
+import g06_buscamines as g06
+import g10_ppt as g10
 
 # Aquesta funció, demana a l'usuari un sencer per triar jocs
+
+
 def chooseIntegerDictionaryMessages(dictIn, listStrMsg):
     # Demana a l'usuari un número de la llista de keys de la llista
     listNumbers = list(dictIn.keys())
@@ -32,11 +38,11 @@ def chooseIntegerDictionaryMessages(dictIn, listStrMsg):
         # Printo el missatge 1 que és triar un joc
         print(listStrMsg[0])
         # Printo el llistat d'opcions de jocs disponibles.
-        for i in range(0,len(listNumbers)):
+        for i in range(0, len(listNumbers)):
             # es a dir el número a la key, i el joc al que accedeixo amb el diccionari
-            print(str(listNumbers[i]),"__",dictIn[listNumbers[i]])
+            print(str(listNumbers[i]), "__", dictIn[listNumbers[i]])
         # recollida de l'input de l'usuari
-        # amb try faix que si em dona un error int() executi la seccio d'except. 
+        # amb try faix que si em dona un error int() executi la seccio d'except.
         try:
             # deso l'input de l'usuari a numTmp
             numTmp = int(input(""))
@@ -54,6 +60,8 @@ def chooseIntegerDictionaryMessages(dictIn, listStrMsg):
 
 # Aquesta funció només executa la funció del correcte.
 # Depeent del paràmetre. L'haureu de tocar a la Versio 1.0
+
+
 def playGame(whatGame):
     # Si no pasa res torno un 0. El programa continua normal
     errorsInExecution = 0
@@ -65,8 +73,16 @@ def playGame(whatGame):
     # elif whatGame == X:
     #    return(s) de la funció = com he anomenat el paquet del joc  .   funció per executar el joc seleccionat ()
     #    errorsInExecution      =                                 g0X.startX 
+    elif whatGame == 1:
+        errorsInExecution = g01.startAhorcado()
     elif whatGame == 2:
         errorsInExecution = g02.startWordle()
+    elif whatGame == 6:
+        errorsInExecution = g06.startBuscamines()
+    elif whatGame == 9:
+        errorsInExecution = g09.startAnagrames()
+    elif whatGame == 10:
+        errorsInExecution = g10.startPPT()
     else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
@@ -74,53 +90,58 @@ def playGame(whatGame):
 
 
 def main():
-    # A la versió 2.0 aquí anirà la selecció de jugador i 
+    # A la versió 2.0 aquí anirà la selecció de jugador i
     # consulta a la base de dades (Ho farà el professor)
-    fdb.tmpMsgDB() # Comprobació que la base de dades 
+    fdb.tmpMsgDB()  # Comprobació que la base de dades
     print()
     print('Benvigut a JOCS CALAMOT')
 
     # creo un diccionari amb els jocs instal·lats
     dictGames={
         0: "Vull deixar de jugar",
-        2: "Wordle"
+        1: "Penjat",
+        2: "Wordle",
+        6: "Buscamines",
+        9: "Anagrama",
+        10: "Ppt"
     }
     # A la versió 1.0 has d'afegir aquó el nom del teu joc.
     # Creo una llista de missatges per mostrar a la funció
-    listMsg2User=['Tria un joc del llistat següent : ',
-        "El número no està al rang",
-        "No has introduit un número sencer"]
+    listMsg2User = ['Tria un joc del llistat següent : ',
+                    "El número no està al rang",
+                    "No has introduit un número sencer"]
     # Li demano a l'usuari a què vol jugar
-    
-    whatToDoNext = 0 # Defineixo variable per entrar al while (i jugar a jocs consecutius)
+
+    # Defineixo variable per entrar al while (i jugar a jocs consecutius)
+    whatToDoNext = 0
     while whatToDoNext == 0:
 
         # Si no inclous el teu joc a la llista durant la versió 1.0, no sortirà al menú d'opcions !!!!
         numGame = chooseIntegerDictionaryMessages(dictGames, listMsg2User)
         # A jugar una partida!
-        # A la versió 2.0 el playGame hauria de acceptar el paràmetre recollir el jugador 
+        # A la versió 2.0 el playGame hauria de acceptar el paràmetre recollir el jugador
         whatToDoNext = playGame(numGame)
         # I tornar si s'ha guanyat o perdut.
 
-        # A la versió 2.0 aquí anirà l'actualització de les victòries del jugador a la base de dades 
+        # A la versió 2.0 aquí anirà l'actualització de les victòries del jugador a la base de dades
         # Ho farà el professor, però necessitarà una variable que ha d'extreure playGame
         # I per tant el teu joc, l'haurà de subministrar.
-
-
 
         # Que fer després de jugar. Si hi ha un error al joc s'hauria de tractar aquí.
         if whatToDoNext == 2:
             print("Hi ha hagut un error al joc, tornant al menu de selecció...")
             whatToDoNext = 0
         # L'usuari vol seguir jugant?
-        if whatToDoNext !=1:
-            yesOrNot = f00.chooseLetterMsg('Vols seguir jugant  [s]/[n]?',['val','sn','Només s\'accepta  s  o  n'],['len',1,'L\'entrada ha de 1 unic caracter s o n'])
+        if whatToDoNext != 1:
+            yesOrNot = f00.chooseLetterMsg('Vols seguir jugant  [s]/[n]?', [
+                                           'val', 'sn', 'Només s\'accepta  s  o  n'], ['len', 1, 'L\'entrada ha de 1 unic caracter s o n'])
             if yesOrNot == 'n':
                 whatToDoNext = 1
         # Si l'usuari vol parar de jugar. Comiat i sortir
         if whatToDoNext == 1:
             print("Fins una altra !")
             return 0
+
 
 # Executo el main, com a única funció del carregador de jocs (la resta, es carreguen des del main).
 main()
