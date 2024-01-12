@@ -19,11 +19,13 @@ from collections import defaultdict
 from termcolor import colored
 import f00_functions as f00
 import f01_data_base as fdb
+import g02_wordle as g02
 # Versió 1.0 cal importar el teu fitxer de jocs
 import g01_penjat as g01
 import g02_wordle as g02
 import g09_anagrama as g09
 import g06_buscamines as g06
+import g07_3ratlla as g07
 import g10_ppt as g10
 
 # Aquesta funció, demana a l'usuari un sencer per triar jocs
@@ -79,6 +81,8 @@ def playGame(whatGame):
         errorsInExecution = g02.startWordle()
     elif whatGame == 6:
         errorsInExecution = g06.startBuscamines()
+    elif whatGame == 7:
+        errorsInExecution = g07.start3EnRatlla()
     elif whatGame == 9:
         errorsInExecution = g09.startAnagrames()
     elif whatGame == 10:
@@ -101,6 +105,7 @@ def main():
         0: "Vull deixar de jugar",
         1: "Penjat",
         2: "Wordle",
+        3: "Tres en raya",
         6: "Buscamines",
         9: "Anagrama",
         10: "Ppt"
