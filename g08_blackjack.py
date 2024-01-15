@@ -228,4 +228,4 @@ def startBlackjack():
 
 # Aquesta línia és només per comprobar que el programa et funciona sense el main
 # Ja per la versió 1.0 hauries de comentar-la i passar-la al codi principal d'alguna manera
-startBlackjack()
+# startBlackjack()
