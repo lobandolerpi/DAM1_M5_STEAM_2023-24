@@ -22,7 +22,7 @@ import f01_data_base as fdb
 import g01_penjat as g01
 import g09_anagrama as g09
 import g06_buscamines as g06
-
+import g04_parells_senars as g04
 # Aquesta funció, demana a l'usuari un sencer per triar jocs
 
 
@@ -74,7 +74,9 @@ def playGame(whatGame):
     elif whatGame == 9:
        # return(s) de la funció = com he anomenat el paquet del joc  .   funció per executar el joc seleccionat ()
         errorsInExecution = g09.startAnagrames()
-    else:
+    elif whatGame ==4 : g04.startparellssenars()
+    
+	else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
     return errorsInExecution
@@ -93,6 +95,7 @@ def main():
         1: "Penjat",
         6: "Buscamines",
         9: "Anagrama"
+	4: "Parells_senars"
     }
     # A la versió 1.0 has d'afegir aquó el nom del teu joc.
     # Creo una llista de missatges per mostrar a la funció
