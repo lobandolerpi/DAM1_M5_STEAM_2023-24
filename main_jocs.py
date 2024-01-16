@@ -76,7 +76,7 @@ def playGame(whatGame):
         errorsInExecution = g09.startAnagrames()
     elif whatGame ==4 : g04.startparellssenars()
     
-	else:
+    else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
     return errorsInExecution
