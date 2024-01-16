@@ -119,9 +119,6 @@ def main():
     dictGames={
 <<<<<<< HEAD
         0: "Vull deixar de jugar",
-        2: "Wordle",
-	7: "Tres en raya"
-=======
         1: "Penjat en castellà",
         2: "Wordle en castellà",
         3: "Pedra, Paper o Tissores",
