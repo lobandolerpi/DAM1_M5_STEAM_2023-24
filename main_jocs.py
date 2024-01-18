@@ -106,7 +106,7 @@ def playGame(whatGame):
     return errorsInExecution
 
 
-def main():
+def main(player7):
     # A la versió 2.0 aquí anirà la selecció de jugador i 
     # consulta a la base de dades (Ho farà el professor)
     BdD = fdb.loadPlayersDB(fdb.pathDB)  # Carrego la Base de dades

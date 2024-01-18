@@ -159,7 +159,7 @@ def start3EnRatlla():
     # Joc del 3 en Ratlla
     # Defineixo un nom provisional pel jugador,
     # Després quan vingui la versió 2.0 s'haureu de canviar com es defineix player
-    player = "Jugador"
+    player="player7"
     # Variable a tornar per que el main general sàpiga que fer
     errorsInExecution = 0
     # Missatge Benviguda
