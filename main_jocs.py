@@ -64,7 +64,7 @@ def chooseIntegerDictionaryMessages(dictIn, listStrMsg):
 
 # Aquesta funció només executa la funció del correcte.
 # Depeent del paràmetre. L'haureu de tocar a la Versio 1.0
-def playGame(whatGame):
+def playGame(whatGame,player):
     # Si no pasa res torno un 0. El programa continua normal
     errorsInExecution = 0
     if whatGame == 0:
