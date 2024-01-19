@@ -1,3 +1,4 @@
+
 import random
 from termcolor import colored
 from collections import defaultdict
@@ -155,11 +156,11 @@ def CPUPlays(logicBoard, VECTORS_WIN, PRIORITY, ALREADY_PLAYED ):
     print(ALREADY_PLAYED)
     return logicBoard, ALREADY_PLAYED  # I torna el taulell actualitzat
 
-def start3EnRatlla():
+def start3EnRatlla(player):
     # Joc del 3 en Ratlla
     # Defineixo un nom provisional pel jugador,
     # Després quan vingui la versió 2.0 s'haureu de canviar com es defineix player
-    player="player7"
+    
     # Variable a tornar per que el main general sàpiga que fer
     errorsInExecution = 0
     # Missatge Benviguda
@@ -200,7 +201,7 @@ def start3EnRatlla():
             print("EMPAT !!!!")
             input('Pitja Enter per recomençar la partida...')
     f00.messageEnd(winner, player)
-    return errorsInExecution
+    return errorsInExecution,winner
     # Quan vingui la versió 2.0 aquí haureu d'afegir més coses al return
 
 # Aquesta línia és només per comprobar que el programa et funciona sense el main

@@ -69,7 +69,7 @@ def chooseIntegerDictionaryMessages(dictIn, listStrMsg):
 
 # Aquesta funció només executa la funció del correcte.
 # Depeent del paràmetre. L'haureu de tocar a la Versio 1.0
-def playGame(whatGame):
+def playGame(whatGame,player):
     # Si no pasa res torno un 0. El programa continua normal
     errorsInExecution = 0
     if whatGame == 0:
@@ -89,7 +89,7 @@ def playGame(whatGame):
         errorsInExecution = g06.startBuscamines()
     elif whatGame == 7:
 <<<<<<< HEAD
-	errorsInExecution = g07.start3EnRatlla()
+	errorsInExecution,winner = g07.start3EnRatlla(player)
 
 =======
         errorsInExecution = g07.start3EnRatlla()
@@ -106,7 +106,7 @@ def playGame(whatGame):
     return errorsInExecution
 
 
-def main(player7):
+def main(player):
     # A la versió 2.0 aquí anirà la selecció de jugador i 
     # consulta a la base de dades (Ho farà el professor)
     BdD = fdb.loadPlayersDB(fdb.pathDB)  # Carrego la Base de dades
