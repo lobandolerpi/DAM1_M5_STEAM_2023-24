@@ -64,7 +64,7 @@ def chooseIntegerDictionaryMessages(dictIn, listStrMsg):
 
 # Aquesta funció només executa la funció del correcte.
 # Depeent del paràmetre. L'haureu de tocar a la Versio 1.0
-def playGame(whatGame):
+def playGame(whatGame, player):
     # Si no pasa res torno un 0. El programa continua normal
     errorsInExecution = 0
     if whatGame == 0:
@@ -73,7 +73,7 @@ def playGame(whatGame):
     elif whatGame == 1:
         errorsInExecution = g01.startAhorcado()
     elif whatGame == 2:
-        errorsInExecution = g02.startWordle()
+        errorsInExecution, victory = g02.startWordle(player)
     elif whatGame == 3:
         errorsInExecution = g03.startPPT()
     elif whatGame == 4:
@@ -93,7 +93,7 @@ def playGame(whatGame):
     else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
-    return errorsInExecution
+    return errorsInExecution, victory
 
 
 def main():

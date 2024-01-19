@@ -104,11 +104,10 @@ def displayBoard(numTries, numMax ,history, wordSecret):
         wordPrint=history[i]
         displayWordColors(wordPrint, wordSecret)
 
-def startWordle():
+def startWordle(player):
     # Joc del Penjat en castellà
     # Defineixo un nom provisional pel jugador,
     # Després quan vingui la versió 2.0 s'haureu de canviar com es defineix player
-    player = "Jugador"
     # Variable a tornar per que el main general sàpiga que fer
     errorsInExecution = 0
     # Inicialitzo el llistat de lletres usades correctes i incorrectes
@@ -157,8 +156,9 @@ def startWordle():
     f00.messageEnd(winner, player)
     print("La paraula era : " )
     displayWordColors( wordObjective, wordObjective)
-    return errorsInExecution
+    return errorsInExecution, winner
     # Quan vingui la versió 2.0 aquí haureu d'afegir més coses al return
 
 # Aquesta línia és només per comprobar que el programa et funciona
 # Ja per la versió 1.0 hauries de comentar-la i passar-la al codi principal d'alguna manera
+# startWordle()
