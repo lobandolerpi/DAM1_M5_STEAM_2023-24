@@ -23,9 +23,9 @@ import f01_data_base as fdb
 import f01_data_base as fdb
 import g01_penjat as g01
 import g02_wordle as g02
-import g03_ppt as g03
-import g04_parells_senars as g04
-import g05_chinos as g05
+# import g03_ppt as g03
+# import g04_parells_senars as g04
+# import g05_chinos as g05
 import g06_buscamines as g06
 import g07_3ratlla as g07
 import g08_blackjack as g08
@@ -74,14 +74,14 @@ def playGame(whatGame,player):
         errorsInExecution = g01.startAhorcado()
     elif whatGame == 2:
         errorsInExecution = g02.startWordle()
-    elif whatGame == 3:
-        errorsInExecution = g03.startPPT()
+    # elif whatGame == 3:
+    #     errorsInExecution = g03.startPPT()
     elif whatGame == 4:
         errorsInExecution = g04.startParellsSenars()
     elif whatGame == 5:
         errorsInExecution = g05.startChinos()
     elif whatGame == 6:
-        errorsInExecution = g06.startBuscamines()
+        errorsInExecution, winner = g06.startBuscamines(player)
     elif whatGame == 7:
         errorsInExecution = g07.start3EnRatlla()
     elif whatGame == 8:
@@ -93,7 +93,7 @@ def playGame(whatGame,player):
     else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
-    return errorsInExecution
+    return errorsInExecution, winner
 
 
 def main():
