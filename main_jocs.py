@@ -27,11 +27,15 @@ import g03_ppt as g03
 import g04_parells_senars as g04
 import g05_chinos as g05
 import g06_buscamines as g06
+<<<<<<< HEAD
 import g07_3ratlla as g07
 import g08_blackjack as g08
 import g09_anagrama as g09
 import g10_ppt as g10
 
+=======
+import g05_chinos as g05
+>>>>>>> g05
 # Aquesta funció, demana a l'usuari un sencer per triar jocs
 def chooseIntegerDictionaryMessages(dictIn, listStrMsg):
     # Demana a l'usuari un número de la llista de keys de la llista
@@ -88,8 +92,14 @@ def playGame(whatGame,player):
         errorsInExecution = g08.startBlackjack()
     elif whatGame == 9:
         errorsInExecution = g09.startAnagrames()
+<<<<<<< HEAD
     elif whatGame == 10:
         errorsInExecution = g10.startPPT()
+=======
+    elif whatGame == 5:
+	errorsInExecution = g05.startChinos()
+
+>>>>>>> g05
     else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
@@ -113,11 +123,16 @@ def main():
         4: "Parells o Senars",
         5: "Punyet (los chinos)",
         6: "Buscamines",
+<<<<<<< HEAD
         7: "3 en ratlla",
         8: "Black Jack (el 21)",
         9: "Anagrama",
         10: "PPT",
         0: "Vull deixar de jugar"
+=======
+        9: "Anagrama" ,
+	5: "Chinos"
+>>>>>>> g05
     }
     # A la versió 1.0 has d'afegir aquó el nom del teu joc.
     # Creo una llista de missatges per mostrar a la funció
