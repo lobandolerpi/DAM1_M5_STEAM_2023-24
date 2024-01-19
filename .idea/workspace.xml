@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="54a28fdb-bc01-4c66-a83d-df77e1fe33d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/f00_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/f00_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/f01_data_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/f01_data_base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/g09_anagrama.py" beforeDir="false" afterPath="$PROJECT_DIR$/g09_anagrama.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_jocs.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_jocs.py" afterDir="false" />
     </list>
@@ -33,7 +33,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "g09",
+    "git-widget-placeholder": "Merging g09",
     "last_opened_file_path": "C:/Users/Admin/Desktop/Izan/M5 Entornos de desarrollo/UF2/Ex2/DAM1_M5_STEAM_2023-24"
   }
 }]]></component>

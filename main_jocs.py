@@ -23,9 +23,9 @@ import f01_data_base as fdb
 import f01_data_base as fdb
 import g01_penjat as g01
 import g02_wordle as g02
-import g03_ppt as g03
+'''import g03_ppt as g03
 import g04_parells_senars as g04
-import g05_chinos as g05
+import g05_chinos as g05'''
 import g06_buscamines as g06
 import g07_3ratlla as g07
 import g08_blackjack as g08
@@ -64,37 +64,24 @@ def chooseIntegerDictionaryMessages(dictIn, listStrMsg):
 
 # Aquesta funció només executa la funció del correcte.
 # Depeent del paràmetre. L'haureu de tocar a la Versio 1.0
-def playGame(whatGame, player):
+
+def playGame(whatGame,player):
     # Si no pasa res torno un 0. El programa continua normal
     errorsInExecution = 0
+    winner = False
     if whatGame == 0:
         # en veritat això no es un error, sino el codi d'error per sortir
         errorsInExecution = 1
-    elif whatGame == 1:
-        errorsInExecution = g01.startAhorcado()
-    elif whatGame == 2:
-        errorsInExecution = g02.startWordle()
-    elif whatGame == 3:
-        errorsInExecution = g03.startPPT()
-    elif whatGame == 4:
-        errorsInExecution = g04.startParellsSenars()
-    elif whatGame == 5:
-        errorsInExecution = g05.startChinos()
-    elif whatGame == 6:
-        errorsInExecution = g06.startBuscamines()
-    elif whatGame == 7:
-        errorsInExecution = g07.start3EnRatlla()
-    elif whatGame == 8:
-        errorsInExecution = g08.startBlackjack()
+
     elif whatGame == 9:
-        errorsInExecution = g09.startAnagrames(player)
-    elif whatGame == 10:
-        errorsInExecution = g10.startPPT()
+        errorsInExecution, winner = g09.startAnagrames(player)
+
     else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
-    return errorsInExecution
+        
 
+    return errorsInExecution, winner
 
 def main():
     # A la versió 2.0 aquí anirà la selecció de jugador i 

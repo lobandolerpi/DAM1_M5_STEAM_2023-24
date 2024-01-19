@@ -142,7 +142,7 @@ def startAnagrames(player):
     f00.messageEnd(winner, player)
     print("La paraula era : ")
     printWordSigns(wordObjective, "[","]","green","on_white")
-    return [errorsInExecution, winner]
+    return errorsInExecution, winner
     # Quan vingui la versió 2.0 aquí haureu d'afegir més coses
 
 # Aquesta línia és només per comprobar que el programa et funciona
