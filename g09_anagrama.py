@@ -99,11 +99,11 @@ def checkListColors(argIn, lenW, lenPrints, defColor):
         listOut = [defColor]*lenW # en cas contrari tot blanc    
     return listOut
 
-def startAnagrames():
+def startAnagrames(player):
     # Joc dels anagrames en castellà
     # Defineixo un nom provisional pel jugador,
     # Després quan vingui la versió 2.0 s'haureu de canviar com es defineix player
-    player = "Jugador"
+
     # Variable a tornar per que el main general sàpiga que fer
     errorsInExecution = 0
     # Imposo que la paraula tingui entre 6 i 9 lletres.
@@ -121,6 +121,7 @@ def startAnagrames():
     wordsHistory = [None]*numberOfGuessesMaximum
     # Inicialitzo la variable per entrar al loop
     endGame = False
+    winner = False
     # Loop fins que indiqui que el joc s'ha acabat.
     while endGame == False:
         print("")
@@ -137,11 +138,11 @@ def startAnagrames():
             winner = True
         elif numberOfGuessesPerformed >= numberOfGuessesMaximum:
             endGame = True
-            winner = False
+
     f00.messageEnd(winner, player)
     print("La paraula era : ")
     printWordSigns(wordObjective, "[","]","green","on_white")
-    return errorsInExecution
+    return [errorsInExecution, winner]
     # Quan vingui la versió 2.0 aquí haureu d'afegir més coses
 
 # Aquesta línia és només per comprobar que el programa et funciona

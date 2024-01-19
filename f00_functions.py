@@ -87,7 +87,7 @@ def chooseLetterMsg(*args):
                 elif keyW == 'len':
                     # Comprovo si la longitud és la especificada
                     if len(letterInput) != args[i_arg][1]:
-                        print (args[i_arg][2]) 
+                        print(args[i_arg][2])
                         errorsHere = True
             if errorsHere == False:
                 validInput == True
