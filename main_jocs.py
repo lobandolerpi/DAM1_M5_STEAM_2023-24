@@ -67,6 +67,7 @@ def chooseIntegerDictionaryMessages(dictIn, listStrMsg):
 def playGame(whatGame,player):
     # Si no pasa res torno un 0. El programa continua normal
     errorsInExecution = 0
+    winner = False
     if whatGame == 0:
         # en veritat això no es un error, sino el codi d'error per sortir
         errorsInExecution = 1

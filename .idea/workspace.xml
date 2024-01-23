@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54a28fdb-bc01-4c66-a83d-df77e1fe33d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/g01_penjat.py" beforeDir="false" afterPath="$PROJECT_DIR$/g01_penjat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_jocs.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_jocs.py" afterDir="false" />
-    </list>
+    <list default="true" id="54a28fdb-bc01-4c66-a83d-df77e1fe33d1" name="Changes" comment="Joc funcional 2.0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,14 +24,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/Izan/M3 Programación/UF2/Ex-Examen&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "g01",
+    "last_opened_file_path": "C:/Users/Admin/Desktop/Izan/M3 Programación/UF2/Ex-Examen"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main_jocs" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="DAM1_M5_STEAM_2023-24" />
@@ -69,7 +65,20 @@
       <option name="presentableId" value="Default" />
       <updated>1703010875250</updated>
     </task>
+    <task id="LOCAL-00001" summary="Joc funcional 2.0">
+      <option name="closed" value="true" />
+      <created>1706035364790</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706035364790</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Joc funcional 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Joc funcional 2.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
