@@ -11,6 +11,7 @@ Removed the betting aspect of the game (used for a school)"""
 import random, sys
 import f00_functions as f00
 from termcolor import colored
+import main_jocs as mj
 
 # Aqui defineix el símbol dels 4 pals de la baralla:
 SUIT_HEART = chr(9829) # Caracter 9829 és '♥'.
@@ -159,11 +160,10 @@ def CPUTurn(playerHand, CPUHand):
         CPUTotal = getHandValue(CPUHand)
     return CPUHand, CPUTotal
 
-def startBlackjack():
+def startBlackjack(player):
     # Joc del BlackJack
     # Defineixo un nom provisional pel jugador,
     # Després quan vingui la versió 2.0 s'haureu de canviar com es defineix player
-    player = "Jugador"
     # Variable a tornar per que el main general sàpiga que fer
     errorsInExecution = 0
     # Missatge Benviguda
