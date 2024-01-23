@@ -19,11 +19,10 @@ from termcolor import colored
 from collections import defaultdict
 import f00_functions as f00
 
-def startChinos():
+def startChinos(player):
     # Joc del Punyet o dels Chinos
     # Defineixo un nom provisional pel jugador,
     # Després quan vingui la versió 2.0 s'haureu de canviar com es defineix player
-    player = "Jugador"
     # Variable a tornar per que el main general sàpiga que fer
     errorsInExecution = 0
     # inicialitzo el nombre de victories dels jugadors i la total.
@@ -117,9 +116,10 @@ def startChinos():
             endGame = True
             winner = False
     f00.messageEnd(winner, player)
-    return errorsInExecution
+    return errorsInExecution, winner
     # Quan vingui la versió 2.0 aquí haureu d'afegir més coses al return
 
 # Aquesta línia és només per comprobar que el programa et funciona sense el main
 # Ja per la versió 1.0 hauries de comentar-la i passar-la al codi principal d'alguna manera
 startChinos()
+
