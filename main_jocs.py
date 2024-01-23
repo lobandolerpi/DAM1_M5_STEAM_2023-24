@@ -18,12 +18,6 @@ import unidecode
 from collections import defaultdict
 from termcolor import colored
 import f00_functions as f00
-import f01_data_base as fdb
-<<<<<<< HEAD
-import g02_wordle as g02
-import g07_3ratlla as g07
-=======
->>>>>>> 9a4ff2558ff66af3408be05b85876e4b87fcb60b
 # Versió 1.0 cal importar el teu fitxer de jocs
 import f01_data_base as fdb
 import g01_penjat as g01
@@ -88,18 +82,13 @@ def playGame(whatGame,player):
     elif whatGame == 6:
         errorsInExecution = g06.startBuscamines()
     elif whatGame == 7:
-<<<<<<< HEAD
 	errorsInExecution,winner = g07.start3EnRatlla(player)
-
-=======
-        errorsInExecution = g07.start3EnRatlla()
     elif whatGame == 8:
         errorsInExecution = g08.startBlackjack()
     elif whatGame == 9:
         errorsInExecution = g09.startAnagrames()
     elif whatGame == 10:
         errorsInExecution = g10.startPPT()
->>>>>>> 9a4ff2558ff66af3408be05b85876e4b87fcb60b
     else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
@@ -117,7 +106,6 @@ def main():
 
     # creo un diccionari amb els jocs instal·lats
     dictGames={
-<<<<<<< HEAD
         0: "Vull deixar de jugar",
         1: "Penjat en castellà",
         2: "Wordle en castellà",
@@ -128,9 +116,7 @@ def main():
         7: "3 en ratlla",
         8: "Black Jack (el 21)",
         9: "Anagrama",
-        10: "PPT",
-        0: "Vull deixar de jugar"
->>>>>>> 9a4ff2558ff66af3408be05b85876e4b87fcb60b
+        10: "PPT"
     }
     # A la versió 1.0 has d'afegir aquó el nom del teu joc.
     # Creo una llista de missatges per mostrar a la funció
