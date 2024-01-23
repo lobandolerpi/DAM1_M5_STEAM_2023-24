@@ -20,6 +20,7 @@ from termcolor import colored
 import f00_functions as f00
 import f01_data_base as fdb
 import g01_penjat as g01
+import g03_ppt as g03
 import g09_anagrama as g09
 import g06_buscamines as g06
 
@@ -69,6 +70,8 @@ def playGame(whatGame):
     # similar al que poso a baix
     elif whatGame == 1:
         errorsInExecution = g01.startAhorcado()
+    elif whatGame == 3:
+	errorsInExecution = g03.startPpt()
     elif whatGame == 6:
         errorsInExecution = g06.startBuscamines()
     elif whatGame == 9:
@@ -91,6 +94,7 @@ def main():
     dictGames = {
         0: "Vull deixar de jugar",
         1: "Penjat",
+	3: "Pedra, paper i tissores",
         6: "Buscamines",
         9: "Anagrama"
     }
