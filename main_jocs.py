@@ -77,7 +77,7 @@ def playGame(whatGame):
     elif whatGame == 3:
         errorsInExecution = g03.startPPT()
     elif whatGame == 4:
-        errorsInExecution = g04.startParellsSenars()
+        errorsInExecution,winer = g04.startParellsSenars(player)
     elif whatGame == 5:
         errorsInExecution = g05.startChinos()
     elif whatGame == 6:
