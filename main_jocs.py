@@ -23,8 +23,8 @@ import f01_data_base as fdb
 import f01_data_base as fdb
 import g01_penjat as g01
 import g02_wordle as g02
-import g03_ppt as g03
-import g04_parells_senars as g04
+# import g03_ppt as g03
+# import g04_parells_senars as g04
 import g05_chinos as g05
 import g06_buscamines as g06
 import g07_3ratlla as g07
