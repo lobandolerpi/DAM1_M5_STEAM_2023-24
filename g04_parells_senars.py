@@ -102,7 +102,7 @@ def startParellsSenars():
             endGame = True
             winner = False
     f00.messageEnd(winner, player)
-    return errorsInExecution
+    return errorsInExecution,winners
     # Quan vingui la versió 2.0 aquí haureu d'afegir més coses al return
 
 # Aquesta línia és només per comprobar que el programa et funciona

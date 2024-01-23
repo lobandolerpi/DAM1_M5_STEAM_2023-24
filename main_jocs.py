@@ -74,8 +74,8 @@ def playGame(whatGame):
     elif whatGame == 9:
        # return(s) de la funció = com he anomenat el paquet del joc  .   funció per executar el joc seleccionat ()
         errorsInExecution = g09.startAnagrames()
-    elif whatGame ==4 : g04.startparellssenars()
-    
+    elif whatGame ==4 :
+    	errorsInExecution,winners = g04.startparellssenars(player)
     else:
         # Hi ha un error no identificat.
         errorsInExecution = 2
