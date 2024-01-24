@@ -19,11 +19,17 @@ from termcolor import colored
 from collections import defaultdict
 import f00_functions as f00
 
-def startPPT():
+def get_player_name():
+    player = input("Introdueix el teu nom de jugador: ")
+    return player
+
+
+def startPPT(player):
     # Joc del Pedra Paper Tisores
     # Defineixo un nom provisional pel jugador,
     # Després quan vingui la versió 2.0 s'haureu de canviar com es defineix player
-    player = "Jugador"
+    player = get_player_name() 
+    
     # Variable a tornar per que el main general sàpiga que fer
     errorsInExecution = 0
     # inicialitzo el nombre de victories dels jugadors i la total.
@@ -37,9 +43,15 @@ def startPPT():
     print('La victoria es per qui guanyi ' + str(numberOfVictoriesToWin) + ' rondes')
     print('Pedra guanya a Tissores, Tissores guanya a Paper, Paper guanya a pedra')
     # Inicialitzo la variable per entrar al loop
+
+    player_defined = False
+
     endGame = False
     # Loop fins que indiqui que el joc s'ha acabat.
     while endGame == False: 
+        if not player_defined:
+            player = get_player_name()
+            player_defined = True
         # Li demano a l'usuari la seva jugadao. Input amb condicionants
         playPlayer = f00.chooseLetterMsg('Introdueix Pedra [0], Paper [1] o Tisores [2] :  ',
             ['len',1,'Longitud de l\'input incorrecta'],
@@ -80,10 +92,19 @@ def startPPT():
         elif numberOfVictoriesCPU >= numberOfVictoriesToWin:
             endGame = True
             winner = False
-    f00.messageEnd(winner, player)
-    return errorsInExecution
+    f00.messageEnd(winner, player)  
+    return errorsInExecution, winner
     # Quan vingui la versió 2.0 aquí haureu d'afegir més coses al return
 
 # Aquesta línia és només per comprobar que el programa et funciona
 # Ja per la versió 1.0 hauries de comentar-la i passar-la al codi principal d'alguna manera
-# startPPT()
+# Crida a la funció startPPT i guarda el valor del nom del jugador
+errors, player_won, player = startPPT("")
+
+# Utilitza el valor del nom del jugador fora de la funció
+if player_won:
+    print(f"Felicidades, {player}! Has guanyat la partida.")
+else:
+    print(f"Ho sentim, {player}. Has perdut la partida.")
+
+

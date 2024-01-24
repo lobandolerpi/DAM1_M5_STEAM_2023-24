@@ -139,6 +139,8 @@ def main():
         # A la versió 2.0 aquí anirà l'actualització de les victòries del jugador a la base de dades 
         # Ho farà el professor, però necessitarà una variable que ha d'extreure playGame
         # I per tant el teu joc, l'haurà de subministrar.
+        if numGame == 10:
+            errors, player_won = g10.startPPT(player)
         BdD = fdb.updateVictories(indU, BdD, victory) # Actualitzo la BdD amb el resultat
         fdb.writePlayersDB(fdb.pathDB, BdD) # guardo la BdD al .txt (si no el jugador pot apagar l'ordinador per no perdre)
         fdb.printVictories(BdD, indU) # Printo les estadístiques del jugador
