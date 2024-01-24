@@ -18,7 +18,6 @@ import unidecode
 from collections import defaultdict
 from termcolor import colored
 import f00_functions as f00
-import f01_data_base as fdb
 # Versió 1.0 cal importar el teu fitxer de jocs
 import f01_data_base as fdb
 import g01_penjat as g01
@@ -68,7 +67,7 @@ def chooseIntegerDictionaryMessages(dictIn, listStrMsg):
 
 # Aquesta funció només executa la funció del correcte.
 # Depeent del paràmetre. L'haureu de tocar a la Versio 1.0
-def playGame(whatGame):
+def playGame(whatGame,player):
     # Si no pasa res torno un 0. El programa continua normal
     errorsInExecution = 0
     if whatGame == 0:
@@ -87,7 +86,7 @@ def playGame(whatGame):
     elif whatGame == 6:
         errorsInExecution = g06.startBuscamines()
     elif whatGame == 7:
-        errorsInExecution = g07.start3EnRatlla()
+	errorsInExecution,winner = g07.start3EnRatlla(player)
     elif whatGame == 8:
         errorsInExecution = g08.startBlackjack()
     elif whatGame == 9:
@@ -116,6 +115,7 @@ def main():
 
     # creo un diccionari amb els jocs instal·lats
     dictGames={
+        0: "Vull deixar de jugar",
         1: "Penjat en castellà",
         2: "Wordle en castellà",
         3: "Pedra, Paper o Tissores",
@@ -126,12 +126,16 @@ def main():
         7: "3 en ratlla",
         8: "Black Jack (el 21)",
         9: "Anagrama",
+<<<<<<< HEAD
         10: "PPT",
         0: "Vull deixar de jugar"
 =======
         9: "Anagrama"
 	4: "Parells_senars"
 >>>>>>> g04
+=======
+        10: "PPT"
+>>>>>>> 7290581673588cff5b3313f775dbc1335c9cbbf9
     }
     # A la versió 1.0 has d'afegir aquó el nom del teu joc.
     # Creo una llista de missatges per mostrar a la funció
